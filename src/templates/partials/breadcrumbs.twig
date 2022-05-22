@@ -1,0 +1,14 @@
+{% import "macros.twig" as macros %}
+
+<nav class="breadcrumbs">
+    <a class="breadcrumbs__link" href="/">Главная</a>
+
+    {% for item in items %}
+        <span class="breadcrumbs__split"> {{ macros.icon('arrow') }} </span>
+        {% if loop.last %}
+            <span class="breadcrumbs__link breadcrumbs__link--current">{{item.title}}</span>
+        {% else %}
+            <a class="breadcrumbs__link" href="{{item.url}}">{{item.title}}</a>
+        {% endif %}
+    {% endfor %}
+</nav>

@@ -1,0 +1,12 @@
+.footer{
+  padding: 25px 17px;
+  box-sizing: border-box;
+  width: 100%;
+  background: #0C2F33;
+
+  &__social-networks{
+    width: 100%;
+    justify-content: center;
+    gap: 40px;
+  }
+}

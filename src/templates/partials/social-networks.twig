@@ -1,0 +1,15 @@
+{% import "macros.twig" as macros %}
+{% set whatsapp = [
+    {icon: 'vk', url: '#'},
+    {icon: 'telegram', url: '#'},
+    {icon: 'insta', url: '#'},
+    {icon: 'whatsapp', url: '#'},
+] %}
+
+<div class="social-networks {{ class }}">
+    {% for network in whatsapp %}
+        <a href="{{ network.url }}" class="social-networks__item {{ macros.mf('social-networks__item', mf) }}">
+            {{ macros.icon(network.icon) }}
+        </a>
+    {% endfor %}
+</div>

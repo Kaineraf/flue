@@ -1,0 +1,26 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 8px 0;
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+
+  &__link {
+    display: inline-block;
+    color: #B1B1B1;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration: none;
+
+    &--current {
+      color: $main-color;
+    }
+  }
+
+  &__split {
+    display: flex;
+    margin: 0 8px 0 10px;
+  }
+}

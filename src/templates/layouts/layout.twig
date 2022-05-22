@@ -2,10 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Дымоход</title>
     {% include '../partials/head.twig' %}
 </head>
 <body>
+    {% include '../partials/header.twig' %}
+    <main class="main">
+        {% block page %}{% endblock %}
+    </main>
+    {% include '../partials/footer.twig' %}
 
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+{% import "macros.twig" as macros %}
+<a href="{{ url ? url : '#' }}" {% if url %} data-fslightbox {% endif %} class="lazy-player">
+
+    {{ macros.Picture({
+        class: 'lazy-player__poster',
+        image: './assets/images/poster',
+        expansion: 'jpg',
+        alt: 'постер к видео'
+    }) }}
+
+    {{ macros.icon('play-btn') }}
+</a>

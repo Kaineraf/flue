@@ -1,0 +1,41 @@
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 30px;
+
+  &__item{
+    position: relative;
+    width: 130px;
+    height: 120px;
+    cursor: pointer;
+
+    $border-gallery-item: 2px solid $main-color;
+
+    &:before, &:after{
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 30px;
+    }
+
+    &:before{
+      top: 0;
+      right: 0;
+      border-top: $border-gallery-item;
+      border-right: $border-gallery-item;
+    }
+
+    &:after{
+      bottom: 0;
+      left: 0;
+      border-left: $border-gallery-item;
+      border-bottom: $border-gallery-item;
+    }
+  }
+
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

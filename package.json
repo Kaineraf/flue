@@ -17,6 +17,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-twig": "^1.2.0",
     "gulp-uglifyjs": "^0.6.2",
+    "gulp-webserver": "^0.9.1",
     "sass": "^1.51.0"
   }
 }

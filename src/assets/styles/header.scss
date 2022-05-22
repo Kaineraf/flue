@@ -1,0 +1,87 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 290px;
+  margin: 0 auto;
+  padding: 18px 0;
+  border-bottom: 1px solid $grey;
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 22px;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+
+    &--cart {
+      position: relative;
+      border: 1px solid $grey;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 72.07%;
+        right: 20.69%;
+        top: 3.17%;
+        bottom: 63.49%;
+        width: 22px;
+        height: 22px;
+        border-radius: 100%;
+        background: $second-color;
+        font-family: $second-font;
+        color: white;
+        font-size: 11px;
+        line-height: 13px;
+        font-weight: 700;
+      }
+    }
+
+    &--burger {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $main-color;
+      background: transparent;
+
+      %bar {
+        width: 18px;
+        height: 2px;
+        border-radius: 3px;
+        background: $main-color;
+      }
+
+      span {
+        position: relative;
+        @extend %bar;
+
+        &:before, &:after {
+          position: absolute;
+          content: '';
+          left: 0;
+          @extend %bar;
+        }
+
+        &:before {
+          top: -8px;
+        }
+
+        &:after {
+          bottom: -8px;
+        }
+      }
+    }
+  }
+}

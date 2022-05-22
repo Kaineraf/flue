@@ -1,0 +1,26 @@
+{% import "macros.twig" as macros %}
+
+<header class="header">
+
+    {{ macros.Picture({
+        class: 'header__logo',
+        image: './assets/images/Logo',
+        expansion: 'png',
+        alt: 'логотип'
+    }) }}
+
+
+    <div class="header__icons">
+        <a href="#" class="header__icon header__icon--cart">
+            {{ macros.icon('cart') }}
+            <span>10</span>
+        </a>
+
+        <button class="header__icon header__icon--burger">
+            <span> </span>
+        </button>
+    </div>
+
+
+
+</header>

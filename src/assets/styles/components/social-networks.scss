@@ -1,0 +1,21 @@
+.social-networks {
+  display: flex;
+  align-items: center;
+  width: max-content;
+
+  &__item {
+    display: flex;
+
+    &--orange {
+      svg path {
+        fill: #EA6628;
+      }
+    }
+
+    &--main-color {
+      svg path {
+        fill: $main-color;
+      }
+    }
+  }
+}
