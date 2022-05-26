@@ -6,6 +6,10 @@
   border-top: 1px solid $grey;
   border-bottom: 1px solid $grey;
 
+  @media (min-width: 768px){
+    padding: 14px 0;
+  }
+
   &__link {
     display: inline-block;
     color: #B1B1B1;

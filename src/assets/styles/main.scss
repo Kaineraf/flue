@@ -32,6 +32,11 @@ input, textarea{
   line-height: 30px;
   padding-top: 16px;
 
+  @media (min-width: 768px){
+    font-size: 30px;
+    line-height: 37px;
+  }
+
   &:before{
     position: absolute;
     content: '';
@@ -47,17 +52,32 @@ input, textarea{
   font-size: 14px;
   line-height: 26px;
 
+  @media (min-width: 768px){
+    font-size: 16px;
+    line-height: 30px;
+  }
+
   span{
     color: $second-color;
   }
 }
 
 .main{
-  max-width: 290px;
+  max-width: 500px;
+  padding: 0 15px;
+  box-sizing: border-box;
   margin: 0 auto;
+
+  @media (min-width: 768px){
+    max-width: 768px;
+  }
 
   &__title{
     margin: 41px 0 11px;
+
+    @media (min-width: 768px){
+      margin: 56px 0 30px;
+    }
   }
 }
 
@@ -67,10 +87,20 @@ input, textarea{
   gap: 16px;
   padding: 16px 0 36px;
 
+  @media (min-width: 768px){
+    gap: 20px;
+    padding: 60px 0 56px;
+  }
+
   &__title{
     font-size: 17px;
     font-weight: 600;
     line-height: 37px;
+
+    @media (min-width: 768px){
+      font-size: 30px;
+      line-height: 63px;
+    }
 
     span{
       font-size: 30px;
@@ -78,6 +108,11 @@ input, textarea{
       line-height: inherit;
       color: $second-color;
       text-transform: uppercase;
+
+      @media (min-width: 768px){
+        font-size: 40px;
+        line-height: 52px;
+      }
     }
   }
 
@@ -91,6 +126,11 @@ input, textarea{
       font-size: 14px;
       line-height: 24px;
 
+      @media (min-width: 768px){
+        font-size: 16px;
+        padding-left: 10px;
+      }
+
       &::marker{
         font-size: 24px;
         color: #EA6628;
@@ -103,8 +143,16 @@ input, textarea{
 .steps{
   margin-bottom: 43px;
 
+  @media (min-width: 768px) {
+    margin-bottom: 55px;
+  }
+
   &__title{
     margin-bottom: 18px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__list{
@@ -114,11 +162,22 @@ input, textarea{
     list-style-type: none;
     counter-reset: index 0;
 
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
     li{
       position: relative;
       font-size: 14px;
       line-height: 26px;
       padding-left: 45px;
+      min-height: 50px;
+
+      @media (min-width: 768px) {
+        width: calc(50% - 70px);
+      }
 
       &:before{
         position: absolute;
@@ -131,6 +190,8 @@ input, textarea{
         line-height: 50px;
         color: $second-color;
         opacity: 0.2;
+        min-width: 35px;
+        text-align: center;
       }
     }
   }
@@ -141,13 +202,29 @@ input, textarea{
 
   &__title{
     margin-bottom: 28px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 37px;
+    }
   }
 
   &__advantages{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 25px;
     margin-top: 24px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+    &-item{
+      max-width: 354px;
+    }
 
   }
 }
@@ -160,22 +237,44 @@ input, textarea{
     font-weight: 800;
     line-height: 30px;
     text-transform: uppercase;
+
+    @media (min-width: 768px){
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 10px;
+    }
   }
 
   &__text{
     font-size: 14px;
     font-weight: 300;
     line-height: 26px;
+
+    @media (min-width: 768px){
+      font-size: 16px;
+      line-height: 30px;
+    }
   }
 
   &__social-networks{
     margin: 23px auto 27px;
     gap: 40px;
+
+    @media (min-width: 768px){
+      margin: 28px auto 34px;
+    }
   }
 
   &__form{
     padding: 25px 0 48px;
     border-top: 1px solid $grey;
+
+    @media (min-width: 768px){
+      border: none;
+      box-shadow: 0 4px 50px rgba(0, 0, 0, 0.15);
+      padding: 49px 0 47px;
+      margin-bottom: 58px;
+    }
     
     &-title{
       text-align: center;
@@ -183,9 +282,16 @@ input, textarea{
       font-size: 18px;
       line-height: 26px;
       margin-bottom: 10px;
+
+      @media (min-width: 768px){
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 12px;
+      }
       
       span{
         color: #EA6628;
+        font-weight: 700;
       }
     }
 
@@ -193,13 +299,23 @@ input, textarea{
       text-align: center;
       font-size: 14px;
       line-height: 25px;
+
+      @media (min-width: 768px){
+        font-size: 16px;
+        line-height: 30px;
+      }
     }
 
     &-fields{
       display: flex;
       flex-direction: column;
       gap: 15px;
-      margin: 27px 0 24px;
+      margin: 27px auto 24px;
+      max-width: 354px;
+
+      @media (min-width: 768px){
+        margin: 22px auto 25px;
+      }
     }
 
     &-field{
@@ -236,12 +352,24 @@ input, textarea{
 .montage{
   margin-bottom: 48px;
 
+  @media (min-width: 768px){
+    margin-bottom: 56px;
+  }
+
   &__title{
     margin-bottom: 28px;
+
+    @media (min-width: 768px){
+      margin-bottom: 34px;
+    }
   }
 
   &__description{
     margin-bottom: 24px;
+
+    @media (min-width: 768px){
+      margin-bottom: 34px;
+    }
   }
 }
 
@@ -250,10 +378,18 @@ input, textarea{
 
   &__title{
     margin-bottom: 16px;
+
+    @media (min-width: 768px){
+      margin-bottom: 34px;
+    }
   }
 
   &__description{
     margin-bottom: 16px;
+
+    @media (min-width: 768px){
+      margin-bottom: 36px;
+    }
   }
 }
 

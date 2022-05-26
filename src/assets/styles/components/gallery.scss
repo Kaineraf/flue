@@ -3,37 +3,57 @@
   flex-wrap: wrap;
   gap: 16px 30px;
 
+  @media (min-width: 768px){
+    gap: 30px;
+  }
+
   &__item{
     position: relative;
-    width: 130px;
-    height: 120px;
+    width: calc(50% - 15px);
+    padding-bottom: calc(50% - 15px);
     cursor: pointer;
 
-    $border-gallery-item: 2px solid $main-color;
+    @media (min-width: 768px){
+      width: calc(33.3% - 20px);
+      padding-bottom: calc(33.3% - 20px);
+    }
 
     &:before, &:after{
       position: absolute;
       content: '';
       width: 30px;
       height: 30px;
+      border-width: 2px;
+      border-style: solid;
+      border-color: transparent;
+      z-index: 1;
+
+      @media (min-width: 768px){
+        width: 50px;
+        height: 50px;
+        border-width: 4px;
+      }
     }
 
     &:before{
       top: 0;
       right: 0;
-      border-top: $border-gallery-item;
-      border-right: $border-gallery-item;
+      border-top-color: $main-color;
+      border-right-color: $main-color;
     }
 
     &:after{
       bottom: 0;
       left: 0;
-      border-left: $border-gallery-item;
-      border-bottom: $border-gallery-item;
+      border-left-color: $main-color;
+      border-bottom-color: $main-color;
     }
   }
 
   &__img{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
